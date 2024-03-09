@@ -1,6 +1,6 @@
 _commit: v1.6.12-13-g9dda52d
 _src_path: /home/crthomas/code/charlesthomas/homelab-template
-additionalResources: daemon-sets.yaml,rbac.yaml
+additionalResources: daemon-sets.yaml
 backups: false
 helm: false
 ingress: false
@@ -10,6 +10,7 @@ namespace: kube-vip
 pvc: false
 reloader: false
 resources:
+- rbac.yaml
 - service-accounts.yaml
 service: false
 serviceAccount: false

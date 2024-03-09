@@ -12,3 +12,4 @@ resources:
 - resources/daemon-sets.yaml
 - resources/namespaces.yaml
 - resources/rbac.yaml
+- resources/service-accounts.yaml
