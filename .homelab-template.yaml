@@ -1,8 +1,9 @@
-_commit: v1.6.12-13-g9dda52d
+_commit: v1.8.2
 _src_path: /home/crthomas/code/charlesthomas/homelab-template
 additionalResources: daemon-sets.yaml
 backups: false
 helm: false
+homepageEnabled: false
 ingress: false
 labels: 'app.kubernetes.io/name: kube-vip'
 name: kube-vip
