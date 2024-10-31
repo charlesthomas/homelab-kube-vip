@@ -52,7 +52,7 @@ spec:
         - name: vip_retryperiod
           value: "1"
         - name: address
-          value: 192.168.1.3
+          value: 192.168.1.10
         image: ghcr.io/kube-vip/kube-vip:v0.8.4
         imagePullPolicy: IfNotPresent
         name: kube-vip
