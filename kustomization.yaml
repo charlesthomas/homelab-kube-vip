@@ -5,11 +5,21 @@ namespace: kube-vip
 
 commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-kube-vip
-commonLabels:
-  app.kubernetes.io/name: kube-vip
+labels:
+- includeSelectors: true
+  pairs:
+    app.kubernetes.io/name: kube-vip
 
 resources:
 - resources/daemon-sets.yaml
 - resources/namespaces.yaml
 - resources/rbac.yaml
 - resources/service-accounts.yaml
+configMapGenerator:
+- name: grafana-dashboard-kube-vip
+  files:
+  - grafana/kube-vip.json
+  options:
+    disableNameSuffixHash: true
+    labels:
+      grafana_dashboard: "1"
